@@ -6,20 +6,64 @@
 
   <meta charset="UTF-8" />
 
-  <title>Hello, world!</title>
-
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <meta name="description" content="" />
 
   <link rel="icon" href="favicon.png">
 
+  <title>Login</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .login-container {
+
+      margin: 0 10%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      max-width: 50%;
+    }
+
+    input[type="username"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      width: 90%;
+      padding: 10px;
+      background-color: #0074d9;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+
 </head>
 
 <body>
-
-  <h1>Hello, world!</h1>
-
+  <div class="login-container">
+    <img src="ihk-logo-schwarz.png" alt="Login Image">
+    <form>
+      <input type="username" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+  </div>
 </body>
 
 </html>
