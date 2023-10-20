@@ -10,10 +10,35 @@ body {
     display: flex;
     background: #DFECF6;
     box-shadow: 5px 5px 5px lightgrey;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
   }
 
   .logo {
-    margin: 0.5rem 0 0 1rem;
+    margin: 0.5rem 1rem;
+    width: 3rem;
+  }
+
+  .settings-icon {
+    margin: 0.5rem 1rem;
+    width: 3rem;
+  }
+
+  .user-name {
+    font-weight: 700;
+  }
+
+  .headline {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
   }
 
 
