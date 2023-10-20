@@ -1,20 +1,22 @@
-.titlebar {
-    overflow: hidden;
-    background: #DFECF6;
-    z-index: 99;
-    box-shadow: 5px 5px 5px lightgrey;
-  }
-  .titlebar a {
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  body {
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
     margin: 0;
   }
+
+.titlebar {
+    display: flex;
+    background: #DFECF6;
+    box-shadow: 5px 5px 5px lightgrey;
+  }
+
+  .logo {
+    margin: 0.5rem 0 0 1rem;
+  }
+
+
   .sidenav {
     height: 100%;
     width: 160px;
