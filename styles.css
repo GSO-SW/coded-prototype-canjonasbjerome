@@ -41,11 +41,14 @@ body {
     font-weight: 700;
   }
 
+  .main {
+    display: flex;
+  }
+
 
   .sidenav {
-    height: 100%;
+    height: calc(100vh - 4rem);
     width: 160px;
-    position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
@@ -54,6 +57,7 @@ body {
     padding-top: 160px;
     box-shadow: 5px 5px 5px lightgrey
   }
+
   .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -67,10 +71,7 @@ body {
     color: #f1f1f1;
   }
 
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+  .main-content {
   }
 
   @media screen and (max-height: 450px) {
