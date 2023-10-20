@@ -10,10 +10,35 @@ body {
     display: flex;
     background: #DFECF6;
     box-shadow: 5px 5px 5px lightgrey;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
   }
 
   .logo {
-    margin: 0.5rem 0 0 1rem;
+    margin: 0.5rem 1rem;
+    width: 3rem;
+  }
+
+  .settings-icon {
+    margin: 0.5rem 1rem;
+    width: 3rem;
+  }
+
+  .user-name {
+    font-weight: 700;
+  }
+
+  .headline {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
   }
 
 
@@ -51,4 +76,12 @@ body {
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+  /*Style für die Tabellen, kann ruhig geändert werden wenn es bessere alternativen gibt*/
+  table, th, td {
+    border:1px solid black;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
   }
