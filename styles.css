@@ -77,11 +77,33 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  /*Style für die Tabellen, kann ruhig geändert werden wenn es bessere alternativen gibt*/
+  /*Style für die Tabellen, kann ruhig geändert werden wenn es bessere alternativen gibt
   table, th, td {
     border:1px solid black;
   }
   .center {
     margin-left: auto;
     margin-right: auto;
+  } */
+  table.blueTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px solid #1C6EA4;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.blueTable td, table.blueTable th {
+    border: 0px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.blueTable tbody td {
+    font-size: 13px;
+  }
+  table.blueTable thead {
+      border-bottom: 2px solid #597393;
+  }
+  table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #597393;
   }
