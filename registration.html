@@ -1,25 +1,89 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
-
-  <title>Hello, world!</title>
-
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="" />
-
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png">
+  <title>Registration</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+    }
 
+    .login-container {
+      width: 40%;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      /* Center the contents of the container */
+      position: relative;
+    }
+
+    img {
+      max-width: 80%;
+      display: block;
+      /* Center the image horizontally */
+      margin: 0 auto;
+      pointer-events: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      width: 97%;
+      padding: 10px;
+      background-color: #0074d9;
+      margin: 5px 0;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0067c2;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="login-container">
+    <img src="ihk-logo-schwarz.png" alt="Registration Image">
+    <form>
+      <input type="text" name="fullname" placeholder="Vollständiger Name" required>
+      <input type="text" name="username" placeholder="Benutzername" required>
+      <input type="text" name="email" placeholder="E-Mail" required>
+      <input type="password" name="password" placeholder="Passwort" required>
+      <input type="password" name="password" placeholder="Passwort wiederholen" required>
 
-  <h1>Hello, world!</h1>
 
+      <button type="submit">Registrieren</button>
+    </form>
+    <p>Du hast bereits einen Account? <a href="login.html">Zum Login</a></p>
+  </div>
 </body>
 
 </html>

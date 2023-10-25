@@ -4,65 +4,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="">
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png">
-
-  <link rel="stylesheet" href="styles.css">
   <title>Login</title>
   <style>
     body {
-
-      align-items: center;
-      justify-content: center;
       height: 100vh;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #ffffff;
     }
 
     .login-container {
       width: 40%;
-      height: 40%;
-      display: block;
-
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 50%;
-      margin-bottom: 50%;
       max-width: 400px;
-      max-height: 400px;
       padding: 20px;
-
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       text-align: center;
       /* Center the contents of the container */
+      position: relative;
     }
 
     img {
-      max-width: 60%;
+      max-width: 80%;
+
       display: block;
       /* Center the image horizontally */
       margin: 0 auto;
+      pointer-events: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
     }
 
     input[type="text"],
     input[type="password"] {
-      width: 100%;
+      width: 90%;
       padding: 10px;
-      margin: 10px 0;
+      margin: 5px 0;
       border: 1px solid #ccc;
       border-radius: 3px;
     }
 
     button {
-      width: 100%;
+      width: 97%;
       padding: 10px;
       background-color: #0074d9;
+      margin: 5px 0;
       color: #fff;
       border: none;
       border-radius: 3px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0067c2;
     }
   </style>
 </head>
@@ -71,11 +74,11 @@
   <div class="login-container">
     <img src="ihk-logo-schwarz.png" alt="Login Image">
     <form>
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
+      <input type="text" name="username" placeholder="Benutzername" required>
+      <input type="password" name="password" placeholder="Passwort" required>
       <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="register.html">Register</a></p>
+    <p>Du hast noch kein Account? <a href="registration.html">Registrieren</a></p>
   </div>
 </body>
 
