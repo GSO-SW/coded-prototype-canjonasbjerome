@@ -5,6 +5,7 @@ settings:
 - inputs vervollständigen
 - speichern button hinzufügen
 - zurück zur startseite hinzufügen
+- popover mit links versehen
 
 edit:
 - alles lol
