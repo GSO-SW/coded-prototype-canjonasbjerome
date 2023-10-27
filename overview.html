@@ -27,17 +27,25 @@
     </div>
     <div class="flex-container">
       <span class="user-name">Eingeloggt als Test Benutzer (Azubi)</span>
-      <img class="settings-icon" src="zahnrad.svg">
+      <div class="popover-trigger">
+        <img class="settings-icon" src="zahnrad.svg">
+        <div class="popover-container">
+          <div class="popover-content">
+            <div>Einstellungen</div>
+            <div>Log-Out</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="sidenav">
-    
+
     <h4 style="margin-left: 1em;"><img src="Filter.png">Filter</h4><br><br>
     <label style="margin-left: 1em;">Von</label><br>
-    <input style="margin-left: 1em;" type="date" ></input><br><br>
+    <input style="margin-left: 1em;" type="date"></input><br><br>
     <label style="margin-left: 1em;">Bis</label><br>
-    <input style="margin-left: 1em;" type="date" ></input><br><br>
+    <input style="margin-left: 1em;" type="date"></input><br><br>
     <label style="margin-left: 1em;">Abteilung</label><br>
     <select style="margin-left: 1em;">
       <option>Alle</option>
@@ -50,59 +58,65 @@
     <h2>Übersicht</h2>
     <table class="blueTable">
       <thead>
-      <tr>
-        <th>Datum</th>
-        <th>Abteilung</th>
-        <th>Status</th>
-        <th></th>
-      </tr>
-    </thead>
+        <tr>
+          <th>Datum</th>
+          <th>Abteilung</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
       <tr>
         <td><text style="color:  #597393;">AW 23: 11.09.23 - 15.09.23</text></td>
         <td><text style="color:  #597393;">Backend</text></td>
         <td><text style="background-color: rgb(30, 203, 30);color: white;">Angenommen</text></td>
-        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon" src="Stift.png"></button></td>
+        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon"
+                src="Stift.png"></button></td>
       </tr>
       <tr>
         <td><text style="color:  #597393;">AW 22: 04.09.23 - 08.09.23</text></td>
         <td><text style="color:  #597393;">Backend</text></td>
         <td><text style="background-color: rgb(30, 203, 30);color: white;">Angenommen</text></td>
-        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon" src="Stift.png"></button></td>
+        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon"
+                src="Stift.png"></button></td>
       </tr>
       <tr>
         <td><text style="color:  #597393;">AW 21: 28.08.23 - 01.08.23</text></td>
         <td><text style="color:  #597393;">Backend</text></td>
         <td><text style="background-color: rgb(30, 203, 30);color: white;">Angenommen</text></td>
-        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon" src="Stift.png"></button></td>
+        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon"
+                src="Stift.png"></button></td>
       </tr>
       <tr>
         <td><text style="color:  #597393;">AW 20: 21.08.23 - 25.08.23</text></td>
         <td><text style="color:  #597393;">Backend</text></td>
         <td><text style="background-color: rgb(30, 203, 30);color: white;">Angenommen</text></td>
-        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon" src="Stift.png"></button></td>
+        <td><button style="padding: 0;border: none;background: none;"><a href="edit.html"><img rel="icon"
+                src="Stift.png"></button></td>
       </tr>
-    </table> 
+    </table>
   </div>
   <div class="footer">
     <a href="#">Datenschutzerklärung</a>
     <a href="#">Kontakt</a>
     <a href="#">Hilfe</a>
     <a href="#">Impressum</a>
-</div>
+  </div>
   <style>
     body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-       
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
     }
 
     .container {
-        padding: 0 20px; /* Add padding to the left and right */
-        flex: 1; /* Allow the container to take up remaining vertical space */
+      padding: 0 20px;
+      /* Add padding to the left and right */
+      flex: 1;
+      /* Allow the container to take up remaining vertical space */
     }
-</style>
+  </style>
 
 </html>
