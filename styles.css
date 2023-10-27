@@ -75,7 +75,20 @@ body {
     color: #f1f1f1;
   }
 
-  .main-content {
+
+  .settings-main {
+    background-color: #f4f4f4;
+
+    h2 {
+      margin: 0em 0em 1em 3em;
+      padding-top: 1em;
+    }
+  }
+  
+  .settings-content-container {
+    background-color: white;
+    min-width: 400px;
+    min-height: 400px;
   }
 
   @media screen and (max-height: 450px) {
