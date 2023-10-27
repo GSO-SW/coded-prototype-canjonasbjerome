@@ -1,0 +1,10 @@
+settings: 
+- sidebar raus
+- content container einfügen
+- inputästhetik verbessern
+- inputs vervollständigen
+- speichern button hinzufügen
+- zurück zur startseite hinzufügen
+
+edit:
+- alles lol
