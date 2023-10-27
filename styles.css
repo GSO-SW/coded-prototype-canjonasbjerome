@@ -84,7 +84,7 @@ body {
       padding-top: 1em;
     }
   }
-  
+
   .settings-content-container {
     background-color: white;
     min-width: 400px;
@@ -125,3 +125,19 @@ body {
     font-weight: bold;
     color: #597393;
   }
+
+  .footer {
+    background: linear-gradient(to right, #003151, #003151);
+    color: white;
+    text-align: right;
+    padding: 10px;
+    position: absolute;
+    bottom: 0; 
+    left: 0px; 
+    right: 0px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
