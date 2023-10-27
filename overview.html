@@ -86,7 +86,48 @@
     </table> 
 
   </div>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+       
+    }
 
+    .container {
+        padding: 0 20px; /* Add padding to the left and right */
+        flex: 1; /* Allow the container to take up remaining vertical space */
+    }
+
+    .footer {
+        background: linear-gradient(to right, #003151, #003151);
+        color: white;
+        text-align: right;
+        padding: 10px;
+        position: absolute; /* Set the footer's position to absolute */
+        bottom: 0; /* Stick the footer to the bottom */
+        left: 0px; /* Add some left padding to the footer */
+        right: 0px;
+    }
+    .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Your page content goes here -->
+</div>
+<div class="footer">
+    <a href="#">Datenschutzerklärung</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Hilfe</a>
+    <a href="#">Impressum</a>
+</div>
 </body>
 
 </html>
