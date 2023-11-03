@@ -27,31 +27,66 @@
     </div>
     <div class="flex-container">
       <span class="user-name">Eingeloggt als Test Benutzer (Azubi)</span>
-      <img class="settings-icon" src="zahnrad.svg">
+      <div class="popover-trigger">
+        <img class="settings-icon" src="zahnrad.svg">
+        <div class="popover-container">
+          <div class="popover-content">
+            <a href="overview.html">Übersicht</a>
+            <a href="settings.html">Einstellungen</a>
+            <a href="login.html">Log-Out</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="settings-main">
 
-
-  <!--  <div class="main-content"> -->
       <h2>AW 23: 11.09.23 - 15.09.23 	</h2>
   <div class="settings-content-container">
-      <label for="">Antrag gestellt:</label><text style="background-color: #909090;">19.09.2023</text><br>
-      <label for="">Antrag bearbeitet:</label><text style="background-color: #909090">21.09.2023</text><br>
-      <label for="">Status:</label><text style="background-color: rgb(30, 203, 30);color: white;">Angenommen</text><br>
+      <label>Antrag gestellt:</label>
+      <text style="background-color: #909090;">19.09.2023</text>
+    <br>
+      <label>Antrag bearbeitet:</label>
+      <text style="background-color: #909090">21.09.2023</text>
+    <br>
+      <label>Status:</label>
+      <text class="greenTextBackground">Angenommen</text>
+    <br>
+
       <hr width=98% size="4" color="#597393">
+
       <h2>Montag 	</h2>
       <label for="">Abteilung:</label>
       <select>
         <option>Backend</option>
         <option>Frontend</option>
       </select><br>
+      <p>
+        <label>
+          Tätigkeit:
+        </label>
+        <Input>
+        </Input>
+      </p>
+      <p>
+        <label>
+          Dauer:
+        </label>
+        <Input type="time">
+        </Input>
+      </p>
   </div>
-  <!--  </div> -->
 
   </div>
+  
 
 </body>
+<div class="footer">
+  <a href="#">Datenschutzerklärung</a>
+  <a href="#">Kontakt</a>
+  <a href="#">Hilfe</a>
+  <a href="#">Impressum</a>
+</div>
 
 </html>

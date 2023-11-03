@@ -189,3 +189,10 @@ table.blueTable thead th {
   text-decoration: none;
   margin: 0 15px;
 }
+.greyText{
+  color: #597393;
+}
+.greenTextBackground{
+  background-color: rgb(30, 203, 30);
+  color: white;
+}
