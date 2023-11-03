@@ -66,6 +66,16 @@
     button:hover {
       background-color: #0067c2;
     }
+
+    /* Added styles for checkbox alignment */
+    .checkbox-container {
+      width: 98%;
+      display: flex;
+      justify-content: flex-end;
+      /* display: flex; */
+      /* justify-content: flex-end; */
+      /* margin-top: 10px; */
+    }
   </style>
 </head>
 
@@ -73,17 +83,44 @@
   <div class="login-container">
     <img src="ihk-logo-schwarz.png" alt="Registration Image">
     <form>
-      <input type="text" name="fullname" placeholder="Vollständiger Name" required>
+
       <input type="text" name="username" placeholder="Benutzername" required>
       <input type="text" name="email" placeholder="E-Mail" required>
-      <input type="password" name="password" placeholder="Passwort" required>
-      <input type="password" name="password" placeholder="Passwort wiederholen" required>
+      <input type="password" name="password" placeholder="Passwort" id="myInput" required>
+      <input type="password" name="password" placeholder="Passwort wiederholen" id="myInput2" required>
 
+      <div class="checkbox-container">
+        <input type="checkbox" onclick="myFunction()">Passwort anzeigen
+      </div>
 
       <button type="submit">Registrieren</button>
     </form>
     <p>Du hast bereits einen Account? <a href="login.html">Zum Login</a></p>
+    <p> <a href="forgotPassword.html">Benutzername / Passwort vergessen</a></p>
   </div>
+
 </body>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+    var x = document.getElementById("myInput2");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+<div class="footer">
+  <a href="#">Datenschutzerklärung</a>
+  <a href="#">Kontakt</a>
+  <a href="#">Hilfe</a>
+  <a href="#">Impressum</a>
+</div>
 
 </html>

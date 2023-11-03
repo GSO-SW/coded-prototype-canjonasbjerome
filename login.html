@@ -53,6 +53,16 @@
       border-radius: 3px;
     }
 
+    /* Added styles for checkbox alignment */
+    .checkbox-container {
+      width: 98%;
+      display: flex;
+      justify-content: flex-end;
+      /* display: flex; */
+      /* justify-content: flex-end; */
+      /* margin-top: 10px; */
+    }
+
     button {
       width: 97%;
       padding: 10px;
@@ -75,11 +85,34 @@
     <img src="ihk-logo-schwarz.png" alt="Login Image">
     <form>
       <input type="text" name="username" placeholder="Benutzername" required>
-      <input type="password" name="password" placeholder="Passwort" required>
+      <input type="password" name="password" placeholder="Passwort" id="myInput">
+      <div class="checkbox-container">
+        <input type="checkbox" onclick="myFunction()">Passwort anzeigen
+      </div>
       <button type="submit">Login</button>
     </form>
-    <p>Du hast noch kein Account? <a href="registration.html">Registrieren</a></p>
+    <p>Du hast noch kein Account? <a href="registration.html">Registrieren</a>
+    <p> <a href="forgotPassword.html">Benutzername / Passwort vergessen</a></p>
   </div>
+  <div class="footer">
+    <a href="#">Datenschutzerklärung</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Hilfe</a>
+    <a href="#">Impressum</a>
+  </div>
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
 </body>
+
 
 </html>
