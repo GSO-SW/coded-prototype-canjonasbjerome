@@ -22,8 +22,9 @@
 
   <div class="titlebar">
     <div class="flex-container">
-      <img class="logo" src="ihk-logo-schwarz.png">
-      <a class="headline" href="overview.html">IHK</a>
+      <a href="overview.html">
+        <img class="logo" src="ihk-logo-schwarz.png">
+      </a>
     </div>
     <div class="flex-container">
       <span class="user-name">Eingeloggt als Test Benutzer (Azubi)</span>
@@ -32,6 +33,7 @@
         <div class="popover-container">
           <div class="popover-content">
             <a href="overview.html">Übersicht</a>
+            <br>
             <a href="login.html">Log-Out</a>
           </div>
         </div>
@@ -39,11 +41,29 @@
     </div>
   </div>
 
-  <div class="settings-main">
-    <h2>Einstellungen</h2>
-    <div class="settings-content-container">
+  <div class="content">
+    <div class="content-container__settings">
       <div class="settings-content">
-        <label for="">Standardabteilung</label><input type="text">
+        <label for="departmentSelect">Standardabteilung</label>
+        <div class="select-container">
+          <select class="select" id="departmentSelect">
+            <option>Backend</option>
+            <option>Frontend</option>
+            <option>Security</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-buttons">
+        <label>Tätigkeitsvorlagen erstellen</label>
+        <a class="button">GOGOGO</a>
+      </div>
+      <div class="settings-buttons">
+        <label>Erinnerungen einstellen</label>
+        <a class="button">GOGOGO</a>
+      </div>
+      <div class="settings-buttons">
+        <a href="overview.html" class="button">Speichern</a>
+        <a href="overview.html" class="button">Abbrechen</a>
       </div>
     </div>
 

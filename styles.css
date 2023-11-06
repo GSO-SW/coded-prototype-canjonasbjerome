@@ -4,6 +4,10 @@
 
 body {
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .titlebar {
@@ -12,6 +16,7 @@ body {
   box-shadow: 5px 5px 5px lightgrey;
   align-items: center;
   justify-content: space-between;
+  height: 3.5rem;
 }
 
 .flex-container {
@@ -37,29 +42,32 @@ body {
 }
 
 .popover-content {
-  color: #333;
-
-  div {
+  a {
     padding: 0.2em 0em;
+    text-decoration: none;
+    color: #000;
   }
 }
 
 .popover-container {
   display: none;
   position: absolute;
-  top: 3em;
+  top: 2.8em;
   right: 1em;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 1;
-  width: 120px;
+  max-width: 120px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
 .user-name {
   font-weight: 700;
+  @media screen and (max-width: 672px) {
+    font-size: 0.75rem;
+  }
 }
 
 .headline {
@@ -70,29 +78,31 @@ body {
   font-weight: 700;
 }
 
-.main {
+.overview-main {
   margin-left: 160px;
-  /* Same as the width of the sidenav */
-  font-size: 28px;
-  /* Increased text to enable scrolling */
   padding: 0px 10px;
+
+  @media screen and (max-width: 672px) {
+    margin-left: 0px;
+  }
 }
 
+.sidenav {
+  height: calc(100vh - 4rem);
+  position: fixed;
+  width: 160px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #DFECF6;
+  overflow-x: hidden;
+  padding-top: 60px;
+  box-shadow: 5px 5px 5px lightgrey;
 
-  .sidenav {
-    height: calc(100vh - 4rem);
-    
-    position: fixed;
-    width: 160px;
-    
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background-color: #DFECF6;
-    overflow-x: hidden;
-    padding-top: 160px;
-    box-shadow: 5px 5px 5px lightgrey
+  @media screen and (max-width: 672px) {
+    display: none;
   }
+}
 
 .sidenav a {
   padding: 6px 8px 6px 16px;
@@ -108,23 +118,95 @@ body {
 }
 
 
-.settings-main {
+.content {
   background-color: #f4f4f4;
-  min-height: 100vh;
+  text-align: center;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  h2 {
-    margin: 0em 0em 1em 3em;
-    padding-top: 1em;
+.content-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2em;
+  min-width: 80vw;
+  min-height: 50vh;
+}
+
+.content-container__settings {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2em;
+  min-width: 40vw;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 990px) {
+    min-width: 80vw;
+    min-height: 50vh
   }
 }
 
-.settings-content-container {
-  background-color: white;
-  max-width: 80vw;
-  min-height: 80vh;
-  margin: auto;
-  border-radius: 5px;
-  padding: 2em;
+.settings-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a.button {
+    width: 25%;
+    padding: 10px;
+    background-color: #597393;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+  }
+
+  a.button:hover {
+    background-color: #0067c2;
+  }
+}
+
+.settings-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .select-container {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+
+    .select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #fff;
+      width: 200px;
+    }
+  }
+
+  .select-container::after {
+    content: 'v';
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    font-size: 15px;
+    pointer-events: none;
+    opacity: 0.7;
+  }
 }
 
 @media screen and (max-height: 450px) {
@@ -174,14 +256,20 @@ table.blueTable thead th {
 }
 
 .footer {
-  background: linear-gradient(to right, #003151, #003151);
-  color: white;
-  text-align: right;
+  background: #597393;
   padding: 10px;
   position: absolute;
   bottom: 0;
   left: 0px;
   right: 0px;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  @media screen and (max-width: 672px) {
+    justify-content: center;
+    font-size: 0.75rem;
+  }
 }
 
 .footer a {
@@ -189,10 +277,12 @@ table.blueTable thead th {
   text-decoration: none;
   margin: 0 15px;
 }
-.greyText{
+
+.greyText {
   color: #597393;
 }
-.greenTextBackground{
+
+.greenTextBackground {
   background-color: rgb(30, 203, 30);
   color: white;
 }
