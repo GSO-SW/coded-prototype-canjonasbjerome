@@ -1,5 +1,10 @@
 * {
   font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 672px) {
+    font-size: 0.9rem;
+  }
 }
 
 body {
@@ -13,10 +18,11 @@ body {
 .titlebar {
   display: flex;
   background: #DFECF6;
-  box-shadow: 5px 5px 5px lightgrey;
+  box-shadow: 0px 5px 5px lightgrey;
   align-items: center;
   justify-content: space-between;
   height: 3.5rem;
+  z-index: 1;
 }
 
 .flex-container {
@@ -65,6 +71,7 @@ body {
 
 .user-name {
   font-weight: 700;
+
   @media screen and (max-width: 672px) {
     font-size: 0.75rem;
   }
@@ -81,6 +88,12 @@ body {
 .overview-main {
   margin-left: 160px;
   padding: 0px 10px;
+  background-color: #f4f4f4;
+  text-align: center;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 672px) {
     margin-left: 0px;
@@ -88,35 +101,61 @@ body {
 }
 
 .sidenav {
-  height: calc(100vh - 4rem);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 160px;
-  z-index: -1;
-  top: 0;
+  top: 3.5rem;
   left: 0;
   background-color: #DFECF6;
   overflow-x: hidden;
-  padding-top: 60px;
-  box-shadow: 5px 5px 5px lightgrey;
+  padding-top: 10px;
+  box-shadow: 5px 0px 5px lightgrey;
 
   @media screen and (max-width: 672px) {
     display: none;
   }
+
+  .select-container {
+    width: 80%;
+  }
+
+  .select-container::after {
+    top: 2px;
+    right: -4px;
+  }
+
+  input,
+  label,
+  select,
+  img {
+    margin-left: 1em;
+    z-index: 0;
+  }
+
+  input,
+  select {
+    margin-bottom: 1em;
+    width: 80%; 
+    padding: 0.3em !important;
+    border: none !important;
+    border-radius: 5px;
+  }
+
+  label {
+    margin-bottom: 0.2em;
+  }
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000000;
-  display: block;
-  align-self: start;
-}
+.filter {
+  display: flex;
+  align-items: center;
 
-.sidenav a:hover {
-  color: #f1f1f1;
+  span {
+    margin-left: 1em;
+  }
 }
-
 
 .content {
   background-color: #f4f4f4;
@@ -127,12 +166,17 @@ body {
   justify-content: center;
 }
 
-.content-container {
+.content-container__overview {
   background-color: white;
   border-radius: 5px;
   padding: 2em;
   min-width: 80vw;
-  min-height: 50vh;
+  min-height: 60vh;
+
+  @media screen and (max-width: 990px) {
+    min-width: 70vw;
+    min-height: 80vh
+  }
 }
 
 .content-container__settings {
@@ -170,6 +214,12 @@ body {
     appearance: button;
   }
 
+  a.button__footer {
+    @media screen and (max-width: 672px) {
+      width: 40%;
+    }
+  }
+
   a.button:hover {
     background-color: #0067c2;
   }
@@ -179,93 +229,105 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .select-container {
-    position: relative;
-    display: inline-block;
-    user-select: none;
+.select-container {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  width: 25%;
 
-    .select {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      outline: none;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #fff;
-      width: 200px;
-    }
+  @media screen and (max-width: 672px) {
+    width: 40%;
   }
 
-  .select-container::after {
-    content: 'v';
-    position: absolute;
-    top: 25%;
-    right: 10px;
-    font-size: 15px;
-    pointer-events: none;
-    opacity: 0.7;
+  .select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
   }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
+.select-container::after {
+  content: 'v';
+  position: absolute;
+  top: 24%;
+  right: 10px;
+  font-size: 15px;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
-/*Style für die Tabellen, kann ruhig geändert werden wenn es bessere alternativen gibt
-  table, th, td {
-    border:1px solid black;
-  }
-  .center {
-    margin-left: auto;
-    margin-right: auto;
-  } */
-table.blueTable {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 0px solid #1C6EA4;
+table.overviewTable {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid #ddeaf3;
+  }
+
+  td, th {
+    padding: 10px 0px; 
+  }
+
+  th.th__date {
+    width: 20%;
+    @media screen and (max-width: 990px) {
+      width: 35%;
+    }
+  }
+
+  th.th__department {
+    width: 60%;
+    @media screen and (max-width: 990px) {
+      width: 20%;
+    }
+  }
+
+  th.th__status {
+    width: 15%;
+    @media screen and (max-width: 990px) {
+      width: 34%;
+    }
+  }
+
+  th.th__icon {
+    width: 5%;
+  }
+
+  thead {
+    border-bottom: 2px solid #597393;
+
+    th {
+      font-weight: bold;
+      color: #597393;
+    }
+  }
+
+  img {
+      height: 1rem;
+  }
 }
 
-table.blueTable td,
-table.blueTable th {
-  border: 0px solid #AAAAAA;
-  padding: 3px 2px;
-}
-
-table.blueTable tbody td {
-  font-size: 13px;
-}
-
-table.blueTable thead {
-  border-bottom: 2px solid #597393;
-}
-
-table.blueTable thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #597393;
-}
 
 .footer {
   background: #597393;
-  padding: 10px;
   position: absolute;
   bottom: 0;
   left: 0px;
   right: 0px;
-  height: 1rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: end;
+
   @media screen and (max-width: 672px) {
     justify-content: center;
     font-size: 0.75rem;
@@ -278,11 +340,18 @@ table.blueTable thead th {
   margin: 0 15px;
 }
 
-.greyText {
-  color: #597393;
+.greenTextBackground {
+  background-color: #40b716;
+  color: white;
+  padding: 4px 6px;
+  border: 1px solid #40b716;
+  border-radius: 25px;
 }
 
-.greenTextBackground {
-  background-color: rgb(30, 203, 30);
+.orangeTextBackground {
+  background-color: #ffa500;
   color: white;
+  padding: 4px 6px;
+  border: 1px solid #ffa500;
+  border-radius: 25px;
 }
