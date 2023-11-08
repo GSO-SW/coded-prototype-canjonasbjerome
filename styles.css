@@ -355,3 +355,39 @@ table.overviewTable {
   border: 1px solid #ffa500;
   border-radius: 25px;
 }
+
+.grayTextBackground {
+  background-color: #909090;
+  color: white;
+  padding: 4px 6px;
+  border: 1px solid #909090;
+  border-radius: 25px;
+}
+
+.content-container__edit {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2em;
+  min-width: 40vw;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 990px) {
+    min-width: 80vw;
+    min-height: 50vh
+  }
+}
+
+.edit-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-headline {
+  margin: auto;
+  color: #597393;
+  display: flex;
+}
