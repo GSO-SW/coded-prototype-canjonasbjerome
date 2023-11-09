@@ -94,6 +94,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   @media screen and (max-width: 672px) {
     margin-left: 0px;
@@ -173,11 +174,6 @@ body {
   padding: 2em;
   min-width: 80vw;
   min-height: 60vh;
-
-  @media screen and (max-width: 990px) {
-    min-width: 70vw;
-    min-height: 80vh
-  }
 }
 
 .content-container__settings {
@@ -365,6 +361,14 @@ table.overviewTable {
   border-radius: 25px;
 }
 
+.blueTextBackground {
+  background-color: #ddeaf3;
+  color: #597393;
+  padding: 8px 10px;
+  border: 1px solid #ddeaf3;
+  border-radius: 25px;
+}
+
 .content-container__edit {
   background-color: white;
   border-radius: 5px;
@@ -385,6 +389,7 @@ table.overviewTable {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .edit-headline {
