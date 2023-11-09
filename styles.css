@@ -164,6 +164,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .content-container__overview {
@@ -387,7 +388,7 @@ table.overviewTable {
 }
 
 .edit-headline {
-  margin: auto;
+  margin: 0 auto 0 auto;
   color: #597393;
   display: flex;
   flex-direction: column;
